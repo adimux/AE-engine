@@ -1,0 +1,75 @@
+# Project: AE_Developement
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Obj/main.o Obj/AEBasic.o Obj/AEAnim.o Obj/AEClip.o Obj/AEEvent.o Obj/AETimer.o Obj/AESpeed.o Obj/AESprite.o Obj/AELoggerFile.o Obj/AELogger.o Obj/AEObject.o Obj/AEDrawManager.o Obj/AELoggerTTF.o Obj/AESpriteBrain.o Obj/AEBinary.o Obj/AE_ClassWithType.o $(RES)
+LINKOBJ  = Obj/main.o Obj/AEBasic.o Obj/AEAnim.o Obj/AEClip.o Obj/AEEvent.o Obj/AETimer.o Obj/AESpeed.o Obj/AESprite.o Obj/AELoggerFile.o Obj/AELogger.o Obj/AEObject.o Obj/AEDrawManager.o Obj/AELoggerTTF.o Obj/AESpriteBrain.o Obj/AEBinary.o Obj/AE_ClassWithType.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf libboost_filesystem.lib  
+INCS =  -I"D:/Dev-Cpp/include" 
+CXXINCS =  -I"D:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/Dev-Cpp/include/c++/3.4.2"  -I"D:/Dev-Cpp/include" 
+BIN  = AE_example.exe
+CXXFLAGS = $(CXXINCS) -g  
+CFLAGS = $(INCS) -g  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before AE_example.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "AE_example.exe" $(LIBS)
+
+Obj/main.o: main.cpp
+	$(CPP) -c main.cpp -o Obj/main.o $(CXXFLAGS)
+
+Obj/AEBasic.o: AEBasic.cpp
+	$(CPP) -c AEBasic.cpp -o Obj/AEBasic.o $(CXXFLAGS)
+
+Obj/AEAnim.o: AEAnim.cpp
+	$(CPP) -c AEAnim.cpp -o Obj/AEAnim.o $(CXXFLAGS)
+
+Obj/AEClip.o: AEClip.cpp
+	$(CPP) -c AEClip.cpp -o Obj/AEClip.o $(CXXFLAGS)
+
+Obj/AEEvent.o: AEEvent.cpp
+	$(CPP) -c AEEvent.cpp -o Obj/AEEvent.o $(CXXFLAGS)
+
+Obj/AETimer.o: AETimer.cpp
+	$(CPP) -c AETimer.cpp -o Obj/AETimer.o $(CXXFLAGS)
+
+Obj/AESpeed.o: AESpeed.cpp
+	$(CPP) -c AESpeed.cpp -o Obj/AESpeed.o $(CXXFLAGS)
+
+Obj/AESprite.o: AESprite.cpp
+	$(CPP) -c AESprite.cpp -o Obj/AESprite.o $(CXXFLAGS)
+
+Obj/AELoggerFile.o: AELoggerFile.cpp
+	$(CPP) -c AELoggerFile.cpp -o Obj/AELoggerFile.o $(CXXFLAGS)
+
+Obj/AELogger.o: AELogger.cpp
+	$(CPP) -c AELogger.cpp -o Obj/AELogger.o $(CXXFLAGS)
+
+Obj/AEObject.o: AEObject.cpp
+	$(CPP) -c AEObject.cpp -o Obj/AEObject.o $(CXXFLAGS)
+
+Obj/AEDrawManager.o: AEDrawManager.cpp
+	$(CPP) -c AEDrawManager.cpp -o Obj/AEDrawManager.o $(CXXFLAGS)
+
+Obj/AELoggerTTF.o: AELoggerTTF.cpp
+	$(CPP) -c AELoggerTTF.cpp -o Obj/AELoggerTTF.o $(CXXFLAGS)
+
+Obj/AESpriteBrain.o: AESpriteBrain.cpp
+	$(CPP) -c AESpriteBrain.cpp -o Obj/AESpriteBrain.o $(CXXFLAGS)
+
+Obj/AEBinary.o: AEBinary.cpp
+	$(CPP) -c AEBinary.cpp -o Obj/AEBinary.o $(CXXFLAGS)
+
+Obj/AE_ClassWithType.o: AE_ClassWithType.cpp
+	$(CPP) -c AE_ClassWithType.cpp -o Obj/AE_ClassWithType.o $(CXXFLAGS)
